@@ -9,11 +9,11 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<XHeader :actions="headerActions" :tabs="headerTabs"/>
 	</template>
 	<MkSpacer :contentMax="900">
-		<MkSelect v-model="type" :class="$style.input" @update:modelValue="onChangePublishing">
+		<MkSelect v-model="filterType" :class="$style.input" @update:modelValue="filterItems">
 			<template #label>{{ i18n.ts.state }}</template>
-			<option value="null">{{ i18n.ts.all }}</option>
-			<option value="true">{{ i18n.ts.publishing }}</option>
-			<option value="false">{{ i18n.ts.expired }}</option>
+			<option value="all">{{ i18n.ts.all }}</option>
+			<option value="publishing">{{ i18n.ts.publishing }}</option>
+			<option value="expired">{{ i18n.ts.expired }}</option>
 		</MkSelect>
 		<div>
 			<div v-for="ad in ads" class="_panel _gaps_m" :class="$style.ad">
@@ -85,7 +85,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import XHeader from './_header_.vue';
 import MkButton from '@/components/MkButton.vue';
 import MkInput from '@/components/MkInput.vue';
@@ -98,18 +98,18 @@ import * as os from '@/os.js';
 import { i18n } from '@/i18n.js';
 import { definePageMetadata } from '@/scripts/page-metadata.js';
 
-let ads: any[] = $ref([]);
+const ads = ref<any[]>([]);
 
 // ISO形式はTZがUTCになってしまうので、TZ分ずらして時間を初期化
 const localTime = new Date();
 const localTimeDiff = localTime.getTimezoneOffset() * 60 * 1000;
 const daysOfWeek: string[] = [i18n.ts._weekday.sunday, i18n.ts._weekday.monday, i18n.ts._weekday.tuesday, i18n.ts._weekday.wednesday, i18n.ts._weekday.thursday, i18n.ts._weekday.friday, i18n.ts._weekday.saturday];
+const filterType = ref('all');
 let publishing: boolean | null = null;
-let type = ref('null');
 
 os.api('admin/ad/list', { publishing: publishing }).then(adsResponse => {
 	if (adsResponse != null) {
-		ads = adsResponse.map(r => {
+		ads.value = adsResponse.map(r => {
 			const exdate = new Date(r.expiresAt);
 			const stdate = new Date(r.startsAt);
 			exdate.setMilliseconds(exdate.getMilliseconds() - localTimeDiff);
@@ -123,9 +123,15 @@ os.api('admin/ad/list', { publishing: publishing }).then(adsResponse => {
 	}
 });
 
-const onChangePublishing = (v) => {
-	console.log(v);
-	publishing = v === 'true' ? true : v === 'false' ? false : null;
+const filterItems = (v) => {
+	if (v === 'publishing') {
+		publishing = true;
+	} else if (v === 'expired') {
+		publishing = false;
+	} else {
+		publishing = null;
+	}
+
 	refresh();
 };
 
@@ -135,7 +141,7 @@ function toggleDayOfWeek(ad, index) {
 }
 
 function add() {
-	ads.unshift({
+	ads.value.unshift({
 		id: null,
 		memo: '',
 		place: 'square',
@@ -155,7 +161,7 @@ function remove(ad) {
 		text: i18n.t('removeAreYouSure', { x: ad.url }),
 	}).then(({ canceled }) => {
 		if (canceled) return;
-		ads = ads.filter(x => x !== ad);
+		ads.value = ads.value.filter(x => x !== ad);
 		if (ad.id == null) return;
 		os.apiWithDialog('admin/ad/delete', {
 			id: ad.id,
@@ -203,9 +209,9 @@ function save(ad) {
 }
 
 function more() {
-	os.api('admin/ad/list', { untilId: ads.reduce((acc, ad) => ad.id != null ? ad : acc).id, publishing: publishing }).then(adsResponse => {
+	os.api('admin/ad/list', { untilId: ads.value.reduce((acc, ad) => ad.id != null ? ad : acc).id, publishing: publishing }).then(adsResponse => {
 		if (adsResponse == null) return;
-		ads = ads.concat(adsResponse.map(r => {
+		ads.value = ads.value.concat(adsResponse.map(r => {
 			const exdate = new Date(r.expiresAt);
 			const stdate = new Date(r.startsAt);
 			exdate.setMilliseconds(exdate.getMilliseconds() - localTimeDiff);
@@ -222,7 +228,7 @@ function more() {
 function refresh() {
 	os.api('admin/ad/list', { publishing: publishing }).then(adsResponse => {
 		if (adsResponse == null) return;
-		ads = adsResponse.map(r => {
+		ads.value = adsResponse.map(r => {
 			const exdate = new Date(r.expiresAt);
 			const stdate = new Date(r.startsAt);
 			exdate.setMilliseconds(exdate.getMilliseconds() - localTimeDiff);
@@ -238,14 +244,14 @@ function refresh() {
 
 refresh();
 
-const headerActions = $computed(() => [{
+const headerActions = computed(() => [{
 	asFullButton: true,
 	icon: 'ti ti-plus',
 	text: i18n.ts.add,
 	handler: add,
 }]);
 
-const headerTabs = $computed(() => []);
+const headerTabs = computed(() => []);
 
 definePageMetadata({
 	title: i18n.ts.ads,
