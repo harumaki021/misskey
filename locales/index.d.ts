@@ -382,6 +382,11 @@ export interface Locale {
     "enableHcaptcha": string;
     "hcaptchaSiteKey": string;
     "hcaptchaSecretKey": string;
+    "mcaptcha": string;
+    "enableMcaptcha": string;
+    "mcaptchaSiteKey": string;
+    "mcaptchaSecretKey": string;
+    "mcaptchaInstanceUrl": string;
     "recaptcha": string;
     "enableRecaptcha": string;
     "recaptchaSiteKey": string;
@@ -672,6 +677,7 @@ export interface Locale {
     "other": string;
     "regenerateLoginToken": string;
     "regenerateLoginTokenDescription": string;
+    "theKeywordWhenSearchingForCustomEmoji": string;
     "setMultipleBySeparatingWithSpace": string;
     "fileIdOrUrl": string;
     "behavior": string;
@@ -1184,6 +1190,9 @@ export interface Locale {
     "overwriteContentConfirm": string;
     "seasonalScreenEffect": string;
     "decorate": string;
+    "addMfmFunction": string;
+    "enableQuickAddMfmFunction": string;
+    "bubbleGame": string;
     "_announcement": {
         "forExistingUsers": string;
         "forExistingUsersDescription": string;
@@ -1648,6 +1657,15 @@ export interface Locale {
                 "title": string;
                 "description": string;
             };
+            "_bubbleGameExplodingHead": {
+                "title": string;
+                "description": string;
+            };
+            "_bubbleGameDoubleExplodingHead": {
+                "title": string;
+                "description": string;
+                "flavor": string;
+            };
         };
     };
     "_role": {
@@ -2066,6 +2084,55 @@ export interface Locale {
         "write:flash": string;
         "read:flash-likes": string;
         "write:flash-likes": string;
+        "read:admin:abuse-user-reports": string;
+        "write:admin:delete-account": string;
+        "write:admin:delete-all-files-of-a-user": string;
+        "read:admin:index-stats": string;
+        "read:admin:table-stats": string;
+        "read:admin:user-ips": string;
+        "read:admin:meta": string;
+        "write:admin:reset-password": string;
+        "write:admin:resolve-abuse-user-report": string;
+        "write:admin:send-email": string;
+        "read:admin:server-info": string;
+        "read:admin:show-moderation-log": string;
+        "read:admin:show-user": string;
+        "read:admin:show-users": string;
+        "write:admin:suspend-user": string;
+        "write:admin:unset-user-avatar": string;
+        "write:admin:unset-user-banner": string;
+        "write:admin:unsuspend-user": string;
+        "write:admin:meta": string;
+        "write:admin:user-note": string;
+        "write:admin:roles": string;
+        "read:admin:roles": string;
+        "write:admin:relays": string;
+        "read:admin:relays": string;
+        "write:admin:invite-codes": string;
+        "read:admin:invite-codes": string;
+        "write:admin:announcements": string;
+        "read:admin:announcements": string;
+        "write:admin:avatar-decorations": string;
+        "read:admin:avatar-decorations": string;
+        "write:admin:federation": string;
+        "write:admin:account": string;
+        "read:admin:account": string;
+        "write:admin:emoji": string;
+        "read:admin:emoji": string;
+        "write:admin:queue": string;
+        "read:admin:queue": string;
+        "write:admin:promo": string;
+        "write:admin:drive": string;
+        "read:admin:drive": string;
+        "read:admin:stream": string;
+        "write:admin:ad": string;
+        "read:admin:ad": string;
+        "write:invite-codes": string;
+        "read:invite-codes": string;
+        "write:clip-favorite": string;
+        "read:clip-favorite": string;
+        "read:federation": string;
+        "write:report-abuse": string;
     };
     "_auth": {
         "shareAccessTitle": string;
@@ -2199,6 +2266,7 @@ export interface Locale {
     "_exportOrImport": {
         "allNotes": string;
         "favoritedNotes": string;
+        "clips": string;
         "followingList": string;
         "muteList": string;
         "blockingList": string;
