@@ -57,6 +57,8 @@ COPY --link ["packages/misskey-js/package.json", "./packages/misskey-js/"]
 COPY --link ["packages/misskey-reversi/package.json", "./packages/misskey-reversi/"]
 COPY --link ["packages/misskey-bubble-game/package.json", "./packages/misskey-bubble-game/"]
 
+#add swap and comment out
+#ENV NODE_OPTIONS=--max-old-space-size=4096
 ARG NODE_ENV=production
 
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store,sharing=locked \
