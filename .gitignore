@@ -69,3 +69,6 @@ tsdoc-metadata.json
 
 # VSCode addon
 .favorites.json
+20231023-20
+*.tar
+*.dump
