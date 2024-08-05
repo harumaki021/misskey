@@ -69,6 +69,13 @@ export const soundsTypes = [
 	'noizenecio/kick_gaba5',
 	'noizenecio/kick_gaba6',
 	'noizenecio/kick_gaba7',
+	'hrmk/miku01_Notification_A',
+	'hrmk/miku02_Notification_B',
+	'hrmk/miku03_SE_makudo',
+	'hrmk/miku04_SE_yoisho',
+	'hrmk/miku05_SE_sore',
+	'hrmk/miku06_SE_chime',
+	'hrmk/miku07_SE_waon',
 ] as const;
 
 export const operationTypes = [
