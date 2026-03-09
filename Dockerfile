@@ -92,6 +92,8 @@ RUN apt-get update \
 COPY ./package.json ./package.json
 RUN node -e "console.log(JSON.parse(require('node:fs').readFileSync('./package.json')).packageManager)" | xargs npm install -g
 
+RUN npm install -g pnpm@10.31.0
+
 USER misskey
 WORKDIR /misskey
 
