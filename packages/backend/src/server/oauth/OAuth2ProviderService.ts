@@ -142,7 +142,13 @@ async function discoverClientInformation(logger: Logger, httpRequestService: Htt
 			redirectUris.push(...httpLinkHeader.parse(linkHeader).get('rel', 'redirect_uri').map(r => r.uri));
 		}
 
+<<<<<<< HEAD
 		if (res.headers.get('content-type')?.includes('application/json')) {
+=======
+		const contentType = res.headers.get('content-type');
+		const mediaType = contentType ? contentType.split(';')[0].trim() : null;
+		if (mediaType === 'application/json') {
+>>>>>>> misskey-dev-develop
 			// Client discovery via JSON document (11 July 2024 spec)
 			// https://indieauth.spec.indieweb.org/#client-metadata
 			// "Clients SHOULD have a JSON [RFC7159] document at their client_id URL containing

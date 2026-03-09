@@ -12,7 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+<<<<<<< HEAD
         uses: actions/checkout@v6.0.1
+=======
+        uses: actions/checkout@v6.0.2
+>>>>>>> misskey-dev-develop
       - name: Check
         run: |
           counter=0

@@ -295,7 +295,11 @@ function onImagePointerdown(ev: PointerEvent) {
 				scaleX: 0.1,
 				scaleY: 0.1,
 				angle: 0,
+<<<<<<< HEAD
 				radius: 3,
+=======
+				radius: 10,
+>>>>>>> misskey-dev-develop
 				ellipse: false,
 			},
 		});

@@ -28,7 +28,11 @@ jobs:
       wait_time: ${{ steps.get-wait-time.outputs.wait_time }}
     steps:
       - name: Checkout
+<<<<<<< HEAD
         uses: actions/checkout@v6.0.1
+=======
+        uses: actions/checkout@v6.0.2
+>>>>>>> misskey-dev-develop
 
       - name: Check allowed users
         id: check-allowed-users

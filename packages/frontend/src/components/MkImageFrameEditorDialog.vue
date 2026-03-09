@@ -156,11 +156,18 @@ SPDX-License-Identifier: AGPL-3.0-only
 import { ref, useTemplateRef, watch, onMounted, onUnmounted, reactive, nextTick } from 'vue';
 import ExifReader from 'exifreader';
 import { throttle } from 'throttle-debounce';
+<<<<<<< HEAD
+=======
+import MkPreviewWithControls from './MkPreviewWithControls.vue';
+>>>>>>> misskey-dev-develop
 import type { ImageFrameParams, ImageFramePreset } from '@/utility/image-frame-renderer/ImageFrameRenderer.js';
 import { ImageFrameRenderer } from '@/utility/image-frame-renderer/ImageFrameRenderer.js';
 import { i18n } from '@/i18n.js';
 import MkModalWindow from '@/components/MkModalWindow.vue';
+<<<<<<< HEAD
 import MkPreviewWithControls from './MkPreviewWithControls.vue';
+=======
+>>>>>>> misskey-dev-develop
 import MkSelect from '@/components/MkSelect.vue';
 import MkFolder from '@/components/MkFolder.vue';
 import MkSwitch from '@/components/MkSwitch.vue';
@@ -390,7 +397,11 @@ async function save() {
 }
 
 function getHex(c: [number, number, number]) {
+<<<<<<< HEAD
 	return `#${c.map(x => (x * 255).toString(16).padStart(2, '0')).join('')}`;
+=======
+	return `#${c.map(x => Math.round(x * 255).toString(16).padStart(2, '0')).join('')}`;
+>>>>>>> misskey-dev-develop
 }
 
 function getRgb(hex: string | number): [number, number, number] | null {

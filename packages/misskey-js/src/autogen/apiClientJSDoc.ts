@@ -4533,11 +4533,19 @@ declare module '../api.js' {
     ): Promise<SwitchCaseResponseType<E, P>>;
 
     /**
+<<<<<<< HEAD
      * Find users who have a birthday on the specified range.
      * 
      * **Credential required**: *Yes* / **Permission**: *read:account*
      */
     request<E extends 'users/get-following-birthday-users', P extends Endpoints[E]['req']>(
+=======
+     * Retrieve users who have a birthday on the specified range.
+     * 
+     * **Credential required**: *Yes* / **Permission**: *read:account*
+     */
+    request<E extends 'users/get-following-users-by-birthday', P extends Endpoints[E]['req']>(
+>>>>>>> misskey-dev-develop
       endpoint: E,
       params: P,
       credential?: string | null,

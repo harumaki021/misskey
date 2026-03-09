@@ -86,7 +86,11 @@ export const paramDef = {
 				sinceDate: { type: 'integer' },
 				untilDate: { type: 'integer' },
 				limit: { type: 'integer', minimum: 1, maximum: 100, default: 10 },
+<<<<<<< HEAD
 				birthday: { ...birthdaySchema, nullable: true, description: '@deprecated use get-following-birthday-users instead.' },
+=======
+				birthday: { ...birthdaySchema, nullable: true, description: '@deprecated use get-following-users-by-birthday instead.' },
+>>>>>>> misskey-dev-develop
 			},
 		},
 	],
@@ -146,7 +150,11 @@ export default class extends Endpoint<typeof meta, typeof paramDef> { // eslint-
 				.andWhere('following.followerId = :userId', { userId: user.id })
 				.innerJoinAndSelect('following.followee', 'followee');
 
+<<<<<<< HEAD
 			// @deprecated use get-following-birthday-users instead.
+=======
+			// @deprecated use get-following-users-by-birthday instead.
+>>>>>>> misskey-dev-develop
 			if (ps.birthday) {
 				query.innerJoin(this.userProfilesRepository.metadata.targetName, 'followeeProfile', 'followeeProfile.userId = following.followeeId');
 

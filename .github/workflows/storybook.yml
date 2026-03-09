@@ -22,12 +22,20 @@ jobs:
       NODE_OPTIONS: "--max_old_space_size=7168"
 
     steps:
+<<<<<<< HEAD
     - uses: actions/checkout@v6.0.1
+=======
+    - uses: actions/checkout@v6.0.2
+>>>>>>> misskey-dev-develop
       if: github.event_name != 'pull_request_target'
       with:
         fetch-depth: 0
         submodules: true
+<<<<<<< HEAD
     - uses: actions/checkout@v6.0.1
+=======
+    - uses: actions/checkout@v6.0.2
+>>>>>>> misskey-dev-develop
       if: github.event_name == 'pull_request_target'
       with:
         fetch-depth: 0
@@ -39,7 +47,11 @@ jobs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v4.2.0
     - name: Use Node.js
+<<<<<<< HEAD
       uses: actions/setup-node@v6.1.0
+=======
+      uses: actions/setup-node@v6.2.0
+>>>>>>> misskey-dev-develop
       with:
         node-version-file: '.node-version'
         cache: 'pnpm'
