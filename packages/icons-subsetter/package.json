@@ -11,16 +11,6 @@
 		"lint": "pnpm typecheck && pnpm eslint"
 	},
 	"devDependencies": {
-<<<<<<< HEAD
-		"@types/node": "24.10.9",
-		"@types/wawoff2": "1.0.2",
-		"@typescript-eslint/eslint-plugin": "8.53.0",
-		"@typescript-eslint/parser": "8.53.0"
-	},
-	"dependencies": {
-		"@tabler/icons-webfont": "3.35.0",
-		"harfbuzzjs": "0.4.15",
-=======
 		"@types/node": "24.11.0",
 		"@types/wawoff2": "1.0.2",
 		"@typescript-eslint/eslint-plugin": "8.56.1",
@@ -29,7 +19,6 @@
 	"dependencies": {
 		"@tabler/icons-webfont": "3.35.0",
 		"harfbuzzjs": "0.10.0",
->>>>>>> misskey-dev-develop
 		"tsx": "4.21.0",
 		"wawoff2": "2.0.1"
 	},

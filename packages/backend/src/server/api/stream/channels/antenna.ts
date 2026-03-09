@@ -4,11 +4,8 @@
  */
 
 import { Inject, Injectable, Scope } from '@nestjs/common';
-<<<<<<< HEAD
-=======
 import { DI } from '@/di-symbols.js';
 import type { AntennasRepository } from '@/models/_.js';
->>>>>>> misskey-dev-develop
 import { NoteEntityService } from '@/core/entities/NoteEntityService.js';
 import { NoteStreamingHidingService } from '../NoteStreamingHidingService.js';
 import { bindThis } from '@/decorators.js';
@@ -30,15 +27,11 @@ export class AntennaChannel extends Channel {
 		@Inject(REQUEST)
 		request: ChannelRequest,
 
-<<<<<<< HEAD
-		private noteEntityService: NoteEntityService,
-=======
 		@Inject(DI.antennasRepository)
 		private antennasReposiotry: AntennasRepository,
 
 		private noteEntityService: NoteEntityService,
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.onEvent = this.onEvent.bind(this);

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-## 2026.1.0
-
-### Note
-- `users/following` の `birthday` プロパティは非推奨になりました。代わりに `users/get-following-birthday-users` をご利用ください。
-=======
 ## Unreleased
 
 ### General
@@ -29,16 +23,12 @@
 
 ### Note
 - `users/following` の `birthday` プロパティは非推奨になりました。代わりに `users/get-following-users-by-birthday` をご利用ください。
->>>>>>> misskey-dev-develop
 
 ### General
 - Enhance: 「もうすぐ誕生日のユーザー」ウィジェットで、誕生日が至近のユーザーも表示できるように  
   (Cherry-picked from https://github.com/MisskeyIO/misskey)
 	- 「今日誕生日のユーザー」は「もうすぐ誕生日のユーザー」に名称変更されました
-<<<<<<< HEAD
-=======
 - Fix: ユーザーハッシュタグページでユーザーの読み込みが重複する問題を修正
->>>>>>> misskey-dev-develop
 - 依存関係の更新
 
 ### Client
@@ -58,8 +48,6 @@
 - Fix: mCaptchaが正しく動作しない問題を修正
 - Fix: 非ログイン時にリバーシの対局が表示されない問題を修正
 - Fix: ノートの詳細表示でリアクションが全件表示されない問題を修正
-<<<<<<< HEAD
-=======
 - Fix: 動画埋め込みプレイヤーなどの一部ウィンドウで、ウィンドウのサイズ変更や移動が正常に行えない問題を修正
 - Fix: 画像エフェクトの修正
   - 塗りつぶし・モザイク・ぼかしエフェクトを回転させると歪む問題を修正
@@ -68,7 +56,6 @@
   - ぼかしに不自然な縦線が入る問題を修正
 - Fix: フォロー承認通知でフォローされた際のメッセージの絵文字が表示されない問題を修正
 - Fix: HTTP環境など（Secure Contextのない環境）で、設定画面が閲覧できない問題を修正
->>>>>>> misskey-dev-develop
 
 ### Server
 - Enhance: OAuthのクライアント情報取得（Client Information Discovery）において、IndieWeb Living Standard 11 July 2024で定義されているJSONドキュメント形式に対応しました

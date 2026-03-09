@@ -32,10 +32,7 @@ export class HybridTimelineChannel extends Channel {
 		private metaService: MetaService,
 		private roleService: RoleService,
 		private noteEntityService: NoteEntityService,
-<<<<<<< HEAD
-=======
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.onNote = this.onNote.bind(this);
@@ -78,15 +75,6 @@ export class HybridTimelineChannel extends Channel {
 			if (!this.followingChannels.has(note.channelId)) {
 				return;
 			}
-<<<<<<< HEAD
-		}
-
-		if (note.visibility === 'followers') {
-			if (!isMe && !Object.hasOwn(this.following, note.userId)) return;
-		} else if (note.visibility === 'specified') {
-			if (!isMe && !note.visibleUserIds!.includes(this.user!.id)) return;
-=======
->>>>>>> misskey-dev-develop
 		}
 
 		if (!this.isNoteVisibleForMe(note)) return;

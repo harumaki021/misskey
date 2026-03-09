@@ -702,11 +702,7 @@ hardWordMuteDescription: "Ignora le Note con la parola o la regola specificata. 
 regexpError: "errore regex"
 regexpErrorDescription: "Si è verificato un errore nell'espressione regolare alla riga {line} della parola muta {tab}:"
 instanceMute: "Silenziare l'istanza"
-<<<<<<< HEAD
-userSaysSomething: "{name} ha detto qualcosa"
-=======
 userSaysSomething: "{name} ha scritto qualcosa"
->>>>>>> misskey-dev-develop
 userSaysSomethingAbout: "{name} ha anNotato qualcosa su \"{word}\""
 makeActive: "Attiva"
 display: "Visualizza"
@@ -2549,11 +2545,7 @@ _widgets:
     chooseList: "Seleziona una lista"
   clicker: "Cliccheria"
   birthdayFollowings: "Compleanni del giorno"
-<<<<<<< HEAD
-  chat: "Chatta con questa persona"
-=======
   chat: "Messaggi diretti"
->>>>>>> misskey-dev-develop
 _widgetOptions:
   showHeader: "Mostra la testata"
   transparent: "Sfondo trasparente"

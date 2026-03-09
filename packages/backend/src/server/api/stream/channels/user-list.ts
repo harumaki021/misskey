@@ -37,10 +37,7 @@ export class UserListChannel extends Channel {
 		request: ChannelRequest,
 
 		private noteEntityService: NoteEntityService,
-<<<<<<< HEAD
-=======
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.updateListUsers = this.updateListUsers.bind(this);

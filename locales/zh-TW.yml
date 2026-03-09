@@ -2859,16 +2859,6 @@ _deck:
   usedAsMinWidthWhenFlexible: "如果啟用「自動調整寬度」，此為最小寬度"
   flexible: "自動調整寬度"
   enableSyncBetweenDevicesForProfiles: "啟用裝置與裝置之間的設定檔資料同步化"
-<<<<<<< HEAD
-  showHowToUse: "檢視使用者界面說明"
-  _howToUse:
-    addColumn_title: "新增欄位"
-    addColumn_description: "您可以選擇要新增的欄位類型。"
-    settings_title: "使用者界面設定"
-    settings_description: "您可以對多欄模式使用者界面做詳細設定。"
-    switchProfile_title: "切換設定檔"
-    switchProfile_description: "將使用者界面佈局儲存為設定檔，就可以隨時切換使用。"
-=======
   showHowToUse: "檢視使用者介面說明"
   _howToUse:
     addColumn_title: "新增欄位"
@@ -2877,7 +2867,6 @@ _deck:
     settings_description: "您可以對多欄模式使用者介面做詳細設定。"
     switchProfile_title: "切換設定檔"
     switchProfile_description: "將使用者介面佈局儲存為設定檔，就可以隨時切換使用。"
->>>>>>> misskey-dev-develop
   _columns:
     main: "主列"
     widgets: "小工具"

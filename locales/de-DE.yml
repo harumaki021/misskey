@@ -1407,10 +1407,7 @@ youAreAdmin: "Sie sind ein Administrator"
 frame: "Rahmen"
 presets: "Vorlage"
 zeroPadding: "Nullauffüllung"
-<<<<<<< HEAD
-=======
 nothingToConfigure: "Es sind keine Einstellungen verfügbar"
->>>>>>> misskey-dev-develop
 _imageEditing:
   _vars:
     caption: "Dateibeschriftung"
@@ -1426,10 +1423,6 @@ _imageEditing:
     camera_lens_model: "Objektivname"
     camera_mm: "Brennweite"
     camera_mm_35: "Brennweite (35-mm-Äquivalent)"
-<<<<<<< HEAD
-_imageFrameEditor:
-  header: "Kopfzeile"
-=======
     camera_f: "Blende"
     camera_s: "Verschlusszeit"
     camera_iso: "ISO-Empfindlichkeit"
@@ -1450,13 +1443,10 @@ _imageFrameEditor:
   withQrCode: "QR-Code"
   backgroundColor: "Hintergrundfarbe"
   textColor: "Textfarbe"
->>>>>>> misskey-dev-develop
   font: "Schriftart"
   fontSerif: "Serif"
   fontSansSerif: "Sans Serif"
   quitWithoutSaveConfirm: "Nicht gespeicherte Änderungen verwerfen?"
-<<<<<<< HEAD
-=======
   failedToLoadImage: "Das Laden des Bildes ist fehlgeschlagen."
 _compression:
   _quality:
@@ -1467,7 +1457,6 @@ _compression:
     large: "Groß"
     medium: "Medium"
     small: "Klein"
->>>>>>> misskey-dev-develop
 _order:
   newest: "Neueste zuerst"
   oldest: "Älteste zuerst"
@@ -2559,17 +2548,12 @@ _widgets:
   chat: "Mit dem Benutzer chatten"
 _widgetOptions:
   showHeader: "Kopfzeile anzeigen"
-<<<<<<< HEAD
-=======
   transparent: "Hintergrund transparent machen"
->>>>>>> misskey-dev-develop
   height: "Höhe"
   _button:
     colored: "Farbig"
   _clock:
     size: "Größe"
-<<<<<<< HEAD
-=======
     thickness: "Dicke"
     thicknessThin: "Dünn"
     thicknessMedium: "Normal"
@@ -2598,7 +2582,6 @@ _widgetOptions:
     shuffle: "Zufällige Anzeigereihenfolge"
     duration: "Banner-Scrollgeschwindigkeit (in Sekunden)"
     reverse: "In andere Richtung scrollen"
->>>>>>> misskey-dev-develop
   _birthdayFollowings:
     period: "Dauer"
 _cw:
@@ -2645,11 +2628,6 @@ _postForm:
   replyPlaceholder: "Dieser Notiz antworten …"
   quotePlaceholder: "Diese Notiz zitieren …"
   channelPlaceholder: "In einen Kanal senden"
-<<<<<<< HEAD
-  _howToUse:
-    visibility_title: "Sichtbarkeit"
-    menu_title: "Menü"
-=======
   showHowToUse: "Formularbeschreibung anzeigen"
   _howToUse:
     content_title: "Dieser Text"
@@ -2664,7 +2642,6 @@ _postForm:
     menu_description: "Sie können außerdem weitere Aktionen durchführen, z. B. als Entwurf speichern, das Posten planen oder Reaktionen einstellen."
     submit_title: "Senden-Button"
     submit_description: "Du kannst die Notiz posten. Du kannst sie auch mit Strg + Enter / Cmd + Enter posten."
->>>>>>> misskey-dev-develop
   _placeholders:
     a: "Was machst du momentan?"
     b: "Was ist um dich herum los?"

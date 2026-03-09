@@ -27,10 +27,7 @@ export class HomeTimelineChannel extends Channel {
 		request: ChannelRequest,
 
 		private noteEntityService: NoteEntityService,
-<<<<<<< HEAD
-=======
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.onNote = this.onNote.bind(this);

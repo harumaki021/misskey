@@ -21,11 +21,6 @@ uniform int u_samples;
 uniform float u_strength;
 out vec4 out_color;
 
-<<<<<<< HEAD
-// TODO: pixelateの中心を画像中心ではなく範囲の中心にする
-// TODO: 画像のアスペクト比に関わらず各画素は正方形にする
-=======
->>>>>>> misskey-dev-develop
 
 void main() {
 	if (u_strength <= 0.0) {
@@ -34,13 +29,6 @@ void main() {
 	}
 
 	float angle = -(u_angle * PI);
-<<<<<<< HEAD
-	vec2 centeredUv = in_uv - vec2(0.5, 0.5) - u_offset;
-	vec2 rotatedUV = vec2(
-		centeredUv.x * cos(angle) - centeredUv.y * sin(angle),
-		centeredUv.x * sin(angle) + centeredUv.y * cos(angle)
-	) + u_offset;
-=======
 	float aspect = in_resolution.x / max(in_resolution.y, 1.0);
 	vec2 centeredUv = in_uv - vec2(0.5, 0.5) - u_offset;
 	vec2 scaledUv = vec2(centeredUv.x * aspect, centeredUv.y);
@@ -49,7 +37,6 @@ void main() {
 		scaledUv.x * sin(angle) + scaledUv.y * cos(angle)
 	);
 	vec2 rotatedUV = vec2(rotatedScaledUv.x / aspect, rotatedScaledUv.y) + u_offset;
->>>>>>> misskey-dev-develop
 
 	bool isInside = false;
 	if (u_ellipse) {
@@ -64,14 +51,6 @@ void main() {
 		return;
 	}
 
-<<<<<<< HEAD
-	float dx = u_strength / 1.0;
-	float dy = u_strength / 1.0;
-	vec2 new_uv = vec2(
-		(dx * (floor((in_uv.x - 0.5 - (dx / 2.0)) / dx) + 0.5)),
-		(dy * (floor((in_uv.y - 0.5 - (dy / 2.0)) / dy) + 0.5))
-	) + vec2(0.5 + (dx / 2.0), 0.5 + (dy / 2.0));
-=======
 	float baseResolution = (in_resolution.x + in_resolution.y) * 0.5;
 	float dx = (u_strength * baseResolution) / max(in_resolution.x, 1.0);
 	float dy = (u_strength * baseResolution) / max(in_resolution.y, 1.0);
@@ -80,23 +59,16 @@ void main() {
 		(dx * (floor((in_uv.x - centerUv.x - (dx / 2.0)) / dx) + 0.5)),
 		(dy * (floor((in_uv.y - centerUv.y - (dy / 2.0)) / dy) + 0.5))
 	) + vec2(centerUv.x + (dx / 2.0), centerUv.y + (dy / 2.0));
->>>>>>> misskey-dev-develop
 
 	vec4 result = vec4(0.0);
 	float totalSamples = 0.0;
 
-<<<<<<< HEAD
-	// TODO: より多くのサンプリング
-	result += texture(in_texture, new_uv);
-	totalSamples += 1.0;
-=======
 	vec2 halfStep = vec2(dx, dy) * 0.25;
 	result += texture(in_texture, new_uv + vec2(-halfStep.x, -halfStep.y));
 	result += texture(in_texture, new_uv + vec2(halfStep.x, -halfStep.y));
 	result += texture(in_texture, new_uv + vec2(-halfStep.x, halfStep.y));
 	result += texture(in_texture, new_uv + vec2(halfStep.x, halfStep.y));
 	totalSamples += 4.0;
->>>>>>> misskey-dev-develop
 
 	out_color = totalSamples > 0.0 ? result / totalSamples : texture(in_texture, in_uv);
 }

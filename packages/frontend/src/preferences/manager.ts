@@ -123,12 +123,8 @@ export function getInitialPrefValue<K extends keyof PREF>(k: K): ValueOf<K> {
 	if (typeof _default === 'function') { // factory
 		return _default() as ValueOf<K>;
 	} else {
-<<<<<<< HEAD
-		return _default as unknown as ValueOf<K>;
-=======
 		// 参照渡しになるのを防ぐためclone
 		return deepClone(_default as unknown as ValueOf<K>);
->>>>>>> misskey-dev-develop
 	}
 }
 

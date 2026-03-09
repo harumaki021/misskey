@@ -4,20 +4,14 @@
  */
 
 import { Inject, Injectable, Scope } from '@nestjs/common';
-<<<<<<< HEAD
-=======
 import { DI } from '@/di-symbols.js';
->>>>>>> misskey-dev-develop
 import { bindThis } from '@/decorators.js';
 import type { GlobalEvents } from '@/core/GlobalEventService.js';
 import type { JsonObject } from '@/misc/json-value.js';
 import { ChatService } from '@/core/ChatService.js';
 import Channel, { type ChannelRequest } from '../channel.js';
 import { REQUEST } from '@nestjs/core';
-<<<<<<< HEAD
-=======
 import type { ChatRoomsRepository } from '@/models/_.js';
->>>>>>> misskey-dev-develop
 
 @Injectable({ scope: Scope.TRANSIENT })
 export class ChatRoomChannel extends Channel {
@@ -31,12 +25,9 @@ export class ChatRoomChannel extends Channel {
 		@Inject(REQUEST)
 		request: ChannelRequest,
 
-<<<<<<< HEAD
-=======
 		@Inject(DI.chatRoomsRepository)
 		private chatRoomsRepository: ChatRoomsRepository,
 
->>>>>>> misskey-dev-develop
 		private chatService: ChatService,
 	) {
 		super(request);

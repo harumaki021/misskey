@@ -341,11 +341,7 @@ export default class extends Endpoint<typeof meta, typeof paramDef> { // eslint-
 
 			if (ps.clientOptions !== undefined) {
 				set.clientOptions = {
-<<<<<<< HEAD
-					...serverSettings.clientOptions,
-=======
 					...this.serverSettings.clientOptions,
->>>>>>> misskey-dev-develop
 					...ps.clientOptions,
 				};
 			}

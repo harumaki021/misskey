@@ -1401,15 +1401,6 @@ scheduledToPostOnX: "มีการกำหนดเวลาให้โพ�
 schedule: "กำหนดเวลา"
 scheduled: "กำหนดเวลา"
 widgets: "วิดเจ็ต"
-<<<<<<< HEAD
-presets: "พรีเซ็ต"
-_imageEditing:
-  _vars:
-    filename: "ชื่อไฟล์"
-_imageFrameEditor:
-  header: "ส่วนหัว"
-  withQrCode: "QR โค้ด"
-=======
 deviceInfo: "รายละเอียดอุปกรณ์"
 deviceInfoDescription: "เมื่อต้องการรับความช่วยเหลือทางเทคนิค กรุณาระบุข้อมูลต่อไปนี้ซึ่งอาจช่วยแก้ไขปัญหาได้"
 youAreAdmin: "คุณคือผู้ดูแลระบบ"
@@ -1452,15 +1443,11 @@ _imageFrameEditor:
   withQrCode: "QR โค้ด"
   backgroundColor: "สีพื้นหลัง"
   textColor: "สีตัวอักษร"
->>>>>>> misskey-dev-develop
   font: "แบบอักษร"
   fontSerif: "Serif"
   fontSansSerif: "Sans Serif"
   quitWithoutSaveConfirm: "ต้องการออกโดยไม่บันทึกหรือไม่?"
-<<<<<<< HEAD
-=======
   failedToLoadImage: "โหลดภาพล้มเหลว"
->>>>>>> misskey-dev-develop
 _compression:
   _quality:
     high: "คุณภาพสูง"
@@ -2561,17 +2548,12 @@ _widgets:
   chat: "แชตเลย"
 _widgetOptions:
   showHeader: "แสดงส่วนหัว"
-<<<<<<< HEAD
-=======
   transparent: "ทำพื้นหลังโปรงใส"
->>>>>>> misskey-dev-develop
   height: "ความสูง"
   _button:
     colored: "สี"
   _clock:
     size: "ขนาด"
-<<<<<<< HEAD
-=======
     thickness: "ความหนาเข็ม"
     thicknessThin: "บาง"
     thicknessMedium: "ปานกลาง"
@@ -2600,7 +2582,6 @@ _widgetOptions:
     shuffle: "สุ่มลำดับ"
     duration: "ความเร็วทิกเกอร์ (วินาที)"
     reverse: "วิ่งไปอีกทาง"
->>>>>>> misskey-dev-develop
   _birthdayFollowings:
     period: "ระยะเวลา"
 _cw:
@@ -2647,11 +2628,6 @@ _postForm:
   replyPlaceholder: "ตอบกลับโน้ตนี้..."
   quotePlaceholder: "อ้างโน้ตนี้..."
   channelPlaceholder: "โพสต์ลงช่อง..."
-<<<<<<< HEAD
-  _howToUse:
-    visibility_title: "การมองเห็น"
-    menu_title: "เมนู"
-=======
   showHowToUse: "แสดงวิธีใช้ฟอร์ม"
   _howToUse:
     content_title: "เนื้อความ"
@@ -2666,7 +2642,6 @@ _postForm:
     menu_description: "สามารถบันทึกเป็นฉบับร่าง ตั้งเวลาการโพสต์ ตั้งค่ารีแอคชั่น และดำเนินการอื่นๆ ได้"
     submit_title: "ปุ่มโพสต์"
     submit_description: "กดปุ่มนั้นเพื่อโพสต์โน้ต หรือกด Ctrl + Enter / Cmd + Return เพื่อโพสต์ก็ได้เช่นกัน"
->>>>>>> misskey-dev-develop
   _placeholders:
     a: "ตอนนี้เป็นยังไงบ้าง?"
     b: "มีอะไรเกิดขึ้นหรือเปล่า?"
@@ -3375,10 +3350,7 @@ _imageEffector:
   title: "เอฟเฟกต์"
   addEffect: "เพิ่มเอฟเฟกต์"
   discardChangesConfirm: "ต้องการทิ้งการเปลี่ยนแปลงแล้วออกหรือไม่?"
-<<<<<<< HEAD
-=======
   failedToLoadImage: "โหลดภาพล้มเหลว"
->>>>>>> misskey-dev-develop
   _fxs:
     chromaticAberration: "ความคลาดสี"
     glitch: "กลิตช์"

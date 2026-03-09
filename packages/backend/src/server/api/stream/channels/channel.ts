@@ -27,10 +27,7 @@ export class ChannelChannel extends Channel {
 		request: ChannelRequest,
 
 		private noteEntityService: NoteEntityService,
-<<<<<<< HEAD
-=======
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.onNote = this.onNote.bind(this);
@@ -53,10 +50,7 @@ export class ChannelChannel extends Channel {
 		if (note.renote && note.renote.user.requireSigninToViewContents && this.user == null) return;
 		if (note.reply && note.reply.user.requireSigninToViewContents && this.user == null) return;
 
-<<<<<<< HEAD
-=======
 		if (!this.isNoteVisibleForMe(note)) return;
->>>>>>> misskey-dev-develop
 		if (this.isNoteMutedOrBlocked(note)) return;
 
 		const { shouldSkip } = await this.noteStreamingHidingService.processHiding(note, this.user?.id ?? null);

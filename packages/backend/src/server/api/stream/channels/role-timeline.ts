@@ -27,10 +27,7 @@ export class RoleTimelineChannel extends Channel {
 
 		private noteEntityService: NoteEntityService,
 		private roleservice: RoleService,
-<<<<<<< HEAD
-=======
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.onNote = this.onNote.bind(this);

@@ -62,10 +62,7 @@ export class MainChannel extends Channel {
 
 			this.send(data.type, data.body);
 		});
-<<<<<<< HEAD
-=======
 
 		return true;
->>>>>>> misskey-dev-develop
 	}
 }

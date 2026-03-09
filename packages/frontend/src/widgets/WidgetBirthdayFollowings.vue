@@ -106,11 +106,7 @@ const end = computed(() => {
 	}
 });
 
-<<<<<<< HEAD
-const birthdayUsersPaginator = markRaw(new Paginator('users/get-following-birthday-users', {
-=======
 const birthdayUsersPaginator = markRaw(new Paginator('users/get-following-users-by-birthday', {
->>>>>>> misskey-dev-develop
 	limit: 18,
 	offsetMode: true,
 	computedParams: computed(() => {

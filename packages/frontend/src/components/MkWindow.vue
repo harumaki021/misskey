@@ -80,14 +80,6 @@ function dragListen(fn: (ev: PointerEvent) => void) {
 	window.addEventListener('blur', clear, { once: true });
 }
 
-<<<<<<< HEAD
-function dragClear(fn: (ev: MouseEvent | TouchEvent) => void) {
-	window.removeEventListener('mousemove', fn);
-	window.removeEventListener('touchmove', fn);
-	window.removeEventListener('mouseleave', dragClear as any);
-	window.removeEventListener('mouseup', dragClear as any);
-	window.removeEventListener('touchend', dragClear as any);
-=======
 function dragClear(fn: (ev: PointerEvent) => void) {
 	window.removeEventListener('pointermove', fn);
 }
@@ -111,7 +103,6 @@ function capturePointer(evt: PointerEvent) {
 
 	window.addEventListener('pointerup', release, { once: true });
 	window.addEventListener('pointercancel', release, { once: true });
->>>>>>> misskey-dev-develop
 }
 
 const props = withDefaults(defineProps<{

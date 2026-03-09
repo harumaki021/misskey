@@ -137,17 +137,9 @@ export class NoteEntityService implements OnModuleInit {
 			return true;
 		}
 
-<<<<<<< HEAD
-		if (!hide) {
-			const hiddenBefore = packedNote.user.makeNotesHiddenBefore;
-			if (shouldHideNoteByTime(hiddenBefore, packedNote.createdAt)) {
-				hide = true;
-			}
-=======
 		const hiddenBefore = packedNote.user.makeNotesHiddenBefore;
 		if (shouldHideNoteByTime(hiddenBefore, packedNote.createdAt)) {
 			return true;
->>>>>>> misskey-dev-develop
 		}
 
 		// visibility が specified かつ自分が指定されていなかったら非表示

@@ -3717,16 +3717,6 @@ export type paths = {
          */
         post: operations['users___gallery___posts'];
     };
-<<<<<<< HEAD
-    '/users/get-following-birthday-users': {
-        /**
-         * users/get-following-birthday-users
-         * @description Find users who have a birthday on the specified range.
-         *
-         *     **Credential required**: *Yes* / **Permission**: *read:account*
-         */
-        post: operations['users___get-following-birthday-users'];
-=======
     '/users/get-following-users-by-birthday': {
         /**
          * users/get-following-users-by-birthday
@@ -3735,7 +3725,6 @@ export type paths = {
          *     **Credential required**: *Yes* / **Permission**: *read:account*
          */
         post: operations['users___get-following-users-by-birthday'];
->>>>>>> misskey-dev-develop
     };
     '/users/get-frequently-replied-users': {
         /**
@@ -34893,11 +34882,7 @@ export interface operations {
                     untilDate?: number;
                     /** @default 10 */
                     limit?: number;
-<<<<<<< HEAD
-                    /** @description @deprecated use get-following-birthday-users instead. */
-=======
                     /** @description @deprecated use get-following-users-by-birthday instead. */
->>>>>>> misskey-dev-develop
                     birthday?: string | null;
                 };
             };
@@ -35033,11 +35018,7 @@ export interface operations {
             };
         };
     };
-<<<<<<< HEAD
-    'users___get-following-birthday-users': {
-=======
     'users___get-following-users-by-birthday': {
->>>>>>> misskey-dev-develop
         requestBody: {
             content: {
                 'application/json': {

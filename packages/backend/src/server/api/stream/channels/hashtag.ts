@@ -13,10 +13,6 @@ import { isRenotePacked, isQuotePacked } from '@/misc/is-renote.js';
 import type { JsonObject } from '@/misc/json-value.js';
 import Channel, { type ChannelRequest } from '../channel.js';
 import { REQUEST } from '@nestjs/core';
-<<<<<<< HEAD
-
-=======
->>>>>>> misskey-dev-develop
 @Injectable({ scope: Scope.TRANSIENT })
 export class HashtagChannel extends Channel {
 	public readonly chName = 'hashtag';
@@ -29,10 +25,7 @@ export class HashtagChannel extends Channel {
 		request: ChannelRequest,
 
 		private noteEntityService: NoteEntityService,
-<<<<<<< HEAD
-=======
 		private noteStreamingHidingService: NoteStreamingHidingService,
->>>>>>> misskey-dev-develop
 	) {
 		super(request);
 		//this.onNote = this.onNote.bind(this);
