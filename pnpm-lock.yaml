@@ -17217,12 +17217,6 @@ snapshots:
     transitivePeerDependencies:
       - bare-abort-controller
 
-  events-universal@1.0.1:
-    dependencies:
-      bare-events: 2.8.1
-    transitivePeerDependencies:
-      - bare-abort-controller
-
   events@3.3.0: {}
 
   execa@4.1.0:
